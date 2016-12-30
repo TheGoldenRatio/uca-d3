@@ -16,8 +16,9 @@
 </style>
 <svg width="960" height="600"></svg>
 <script src="d3.min.js"></script>
-<script>
+<script type='text/javascript' src="http://bost.ocks.org/mike/fisheye/fisheye.js?0.0.3"> </script>
 
+<script>
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
@@ -26,8 +27,12 @@ var color = d3.scaleOrdinal(d3.schemeCategory20);
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.id; }))
-    .force("charge", d3.forceManyBody())
+    .force("charge", d3.forceManyBody().distanceMax(100))
     .force("center", d3.forceCenter(width / 2, height / 2));
+
+var fisheye = d3.fisheye.circular()
+      .radius(120);
+
 
 d3.json("students.json", function(error, graph) {
   if (error) throw error;
@@ -51,6 +56,8 @@ d3.json("students.json", function(error, graph) {
           .on("drag", dragged)
           .on("end", dragended));
 
+
+
   node.append("title")
       .text(function(d) { return d.id; });
 
@@ -72,10 +79,25 @@ d3.json("students.json", function(error, graph) {
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; });
   }
+
+  svg.on("mousemove", function() {
+        force.stop();
+        fisheye.focus(d3.mouse(this));
+        d3.selectAll("circle").each(function(d) { d.fisheye = fisheye(d); })
+            .attr("cx", function(d) { return d.fisheye.x; })
+            .attr("cy", function(d) { return d.fisheye.y; })
+            .attr("r", function(d) { return d.fisheye.z * 8; });
+        link.attr("x1", function(d) { return d.source.fisheye.x; })
+            .attr("y1", function(d) { return d.source.fisheye.y; })
+            .attr("x2", function(d) { return d.target.fisheye.x; })
+            .attr("y2", function(d) { return d.target.fisheye.y; });
+      });
+
+
 });
 
 function dragstarted(d) {
-  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  if (!d3.event.active) simulation.alphaTarget(0.2).restart();
   d.fx = d.x;
   d.fy = d.y;
 }
@@ -90,5 +112,8 @@ function dragended(d) {
   d.fx = null;
   d.fy = null;
 }
+
+
+
 
 </script>
