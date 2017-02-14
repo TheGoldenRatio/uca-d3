@@ -1,6 +1,12 @@
 
 <!DOCTYPE html>
-<meta charset="utf-8">
+<meta>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="normalize.css">
+</meta>
+
+<h1>Yielded Students: Preadmit Social Network </h1>
+
 <style>
 
 .links line {
@@ -14,7 +20,7 @@
 }
 
 </style>
-<svg width="960" height="600"></svg>
+<svg width="760" height="600"></svg>
 <script src="d3.min.js"></script>
 <script type='text/javascript' src="http://bost.ocks.org/mike/fisheye/fisheye.js?0.0.3"> </script>
 
@@ -30,8 +36,6 @@ var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody().distanceMax(100))
     .force("center", d3.forceCenter(width / 2, height / 2));
 
-var fisheye = d3.fisheye.circular()
-      .radius(120);
 
 
 d3.json("students.json", function(error, graph) {
@@ -112,7 +116,6 @@ function dragended(d) {
   d.fx = null;
   d.fy = null;
 }
-
 
 
 

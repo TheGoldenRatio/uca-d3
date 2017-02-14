@@ -16,7 +16,7 @@ To run graphs with CSV files use: ` python -m http.server ` in directory to get 
 
 *Examples:*
 
-<img src = "net.png" style="height:250px;">
+<img src = "net.png" style="width:250px;">
 
 <img src = "Country-D3.png" style="height:200px;">
 
