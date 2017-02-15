@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="normalize.css">
     <style>
 
-
-
 		#pieChart {    
 			position:absolute;	
 			top:10px;
@@ -28,7 +26,7 @@
 		 font-family: "Avenir";
 			font-size: 20px;	
 		
-}
+		}
 
 		.slice {
 		   font-size: 12pt;
@@ -46,8 +44,7 @@
     <script type="text/javascript">
     
 /*
-################ FORMATS ##################
--------------------------------------------
+ FORMATS 
 */
 
 
@@ -63,11 +60,8 @@ var 	formatAsPercentage = d3.format("%"),
 		;
 
 /*
-############# PIE CHART ###################
--------------------------------------------
+ PIE CHART
 */
-
-
 
 function dsPieChart(){
 
@@ -147,7 +141,6 @@ function dsPieChart(){
 		    return a > 90 ? a - 180 : a;
 		}
 		    
-		
 		// Pie chart title			
 		vis.append("svg:text")
 	     .attr("dy", ".35em")
@@ -156,13 +149,10 @@ function dsPieChart(){
 	      .attr("class","title")
 	      ;		    
 
-
 		
 	function mouseover() {
 	  d3.select(this).select("path").transition()
 	      .duration(750)
-	        		//.attr("stroke","red")
-	        		//.attr("stroke-width", 1.5)
 	        		.attr("d", arcFinal3)
 	        		;
 	}
@@ -170,14 +160,11 @@ function dsPieChart(){
 	function mouseout() {
 	  d3.select(this).select("path").transition()
 	      .duration(750)
-	        		//.attr("stroke","blue")
-	        		//.attr("stroke-width", 1.5)
 	        		.attr("d", arcFinal)
 	        		;
 	}
 	
 	function up(d, i) {
-	
 				/* update bar chart when user selects piece of the pie chart */
 				//updateBarChart(dataset[i].category);
 				updateBarChart(d.data.category, color(i));			 
@@ -187,10 +174,8 @@ function dsPieChart(){
 dsPieChart();
 
 /*
-############# BAR CHART ###################
--------------------------------------------
+ BAR CHART 
 */
-
 
 
 var datasetBarChart = [
@@ -204,16 +189,16 @@ var datasetBarChart = [
 { group: "CS", category: "Urban", measure: 50},  
 { group: "Economics", category: "Male", measure: 48}, 
 { group: "Economics", category: "Female", measure: 52 }, 
-{ group: "Economics", category: "Urban", measure: 57}, 
-{ group: "Economics", category: "Rural", measure: 43 }, 
+{ group: "Economics", category: "Rural", measure: 43 },
+{ group: "Economics", category: "Urban", measure: 57},  
 { group: "Earth & Env.", category: "Male", measure: 70}, 
 { group: "Earth & Env.", category: "Female", measure: 30 }, 
-{ group: "Earth & Env.", category: "Urban", measure: 30 }, 
 { group: "Earth & Env.", category: "Rural", measure: 70}, 
+{ group: "Earth & Env.", category: "Urban", measure: 30 }, 
 { group: "Media", category: "Male", measure: 33}, 
 { group: "Media", category: "Female", measure: 67 }, 
-{ group: "Media", category: "Urban", measure: 42 }, 
 { group: "Media", category: "Rural", measure: 58}, 
+{ group: "Media", category: "Urban", measure: 42 }, 
 ]
 ;
 
@@ -437,7 +422,6 @@ function updateBarChart(group, colorChosen) {
 		   .attr("class", "yAxis")					 
 		;
 		
-
 		svg.selectAll("text.title") // target the text element(s) which has a title class defined
 			.attr("x", (width + margin.left + margin.right)/2)
 			.attr("y", 15)
@@ -446,7 +430,6 @@ function updateBarChart(group, colorChosen) {
 			.text(group + "'s Breakdown 2021")
 		;
 }
-
 
     </script>
   </body>
