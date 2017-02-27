@@ -1,4 +1,4 @@
-#### Correlations between Entrance Exam, Math Grade, Math Final Exam
+#### Correlations between Entrance Exam and English, Science, Math
 
 library(corrplot)
 library(ggplot2)
@@ -60,4 +60,14 @@ quickplot(sci_df[1], sci_df[4]) # math, grade
 quickplot(sci_df[2], sci_df[4]) # english, grade
 quickplot(sci_df[3], sci_df[4]) #logic, grade
 
+
+
+### English ####
+
+eng_df <- read.table("Documents/engl_corr_s.csv", header = TRUE, sep = ",")
+
+eng_corr <- cor(eng_df)
+corrplot.mixed(eng_corr, lower="ellipse", upper = "number")
+
+quickplot(eng_df[2],eng_df[4])
 
