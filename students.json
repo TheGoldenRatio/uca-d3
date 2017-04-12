@@ -148,7 +148,6 @@
             {"source": "Jyldyz", "target": "Burulsun", "value": 1},
             {"source": "Jyldyz", "target": "Eraj", "value": 1},
 
-
             {"source": "Nurlan", "target": "Buzurgmehr", "value": 1},
             {"source": "Nurlan", "target": "Najmiya", "value": 1},
             {"source": "Nurlan", "target": "Ozar", "value": 1},
@@ -181,7 +180,6 @@
 
             {"source": "Abdul Hakim", "target": "Alyna", "value": 1},
             {"source": "Abdul Hakim", "target": "Saif", "value": 1},
-
 
             {"source": "Nadira", "target": "Beknazar", "value": 1},
             {"source": "Nadira", "target": "Syimyk", "value": 1},
@@ -775,7 +773,6 @@
             {"source": "Temirkhan", "target": "Manuchekhr", "value": 1},
 
             {"source": "Iskender", "target": "Buzurgmehr", "value": 1},
-            {"source": "Iskender", "target": "Najmiya", "value": 1},
             {"source": "Iskender", "target": "Ozar", "value": 1},
             {"source": "Iskender", "target": "Adelina", "value": 1},
             {"source": "Iskender", "target": "Bagymdat", "value": 1},
@@ -801,7 +798,6 @@
             {"source": "Iskender", "target": "Eraj", "value": 1},
 
             {"source": "Eldiiar", "target": "Buzurgmehr", "value": 1},
-            {"source": "Eldiiar", "target": "Najmiya", "value": 1},
             {"source": "Eldiiar", "target": "Ozar", "value": 1},
             {"source": "Eldiiar", "target": "Adelina", "value": 1},
             {"source": "Eldiiar", "target": "Bagymdat", "value": 1},
@@ -839,7 +835,6 @@
             {"source": "Suyuna", "target": "Bermet", "value": 1},
 
             {"source": "Atai", "target": "Buzurgmehr", "value": 1},
-            {"source": "Atai", "target": "Najmiya", "value": 1},
             {"source": "Atai", "target": "Ozar", "value": 1},
             {"source": "Atai", "target": "Bagymdat", "value": 1},
             {"source": "Atai", "target": "Iskender", "value": 1},
@@ -861,20 +856,15 @@
             {"source": "Atai", "target": "Jyldyz", "value": 1},
             {"source": "Atai", "target": "Viacheslav", "value": 1},
             {"source": "Atai", "target": "Eraj", "value": 1},
-
             {"source": "Firuzai", "target": "Anisa", "value": 1},
             {"source": "Firuzai", "target": "Munira", "value": 1},
             {"source": "Firuzai", "target": "Buzurgmehr", "value": 1},
             {"source": "Firuzai", "target": "Ozar", "value": 1},
             {"source": "Firuzai", "target": "Khudunazar", "value": 1},
             {"source": "Firuzai", "target": "Butabek", "value": 1},
-
             {"source": "Anisa", "target": "Munira", "value": 1},
-
             {"source": "Nozanin", "target": "Parvina", "value": 1},
-
             {"source": "Parvina", "target": "Firuzai", "value": 1},
-
             {"source": "Burulsun", "target": "Bagymdat", "value": 1},
             {"source": "Burulsun", "target": "Beknazar", "value": 1},
             {"source": "Burulsun", "target": "Jyldyz", "value": 1}
